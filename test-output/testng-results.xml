@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-18T20:12:18 IST" name="Default suite" finished-at="2024-06-18T20:12:26 IST" duration-ms="8584">
+  <suite started-at="2024-06-19T19:39:31 IST" name="Default suite" finished-at="2024-06-19T19:39:41 IST" duration-ms="10370">
     <groups>
     </groups>
-    <test started-at="2024-06-18T20:12:18 IST" name="Default test" finished-at="2024-06-18T20:12:26 IST" duration-ms="8584">
-      <class name="com.demowebshop.tests.LoginTest">
-        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.LoginTest@399f45b1]" started-at="2024-06-18T20:12:18 IST" name="initializeDriver" finished-at="2024-06-18T20:12:24 IST" duration-ms="6641" status="PASS">
+    <test started-at="2024-06-19T19:39:31 IST" name="Default test" finished-at="2024-06-19T19:39:41 IST" duration-ms="10370">
+      <class name="com.demowebshop.tests.SubscribeTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.SubscribeTest@478190fc]" started-at="2024-06-19T19:39:31 IST" name="initializeDriver" finished-at="2024-06-19T19:39:37 IST" duration-ms="6425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsAbleToLoginWithValidCreds()[pri:0, instance:com.demowebshop.tests.LoginTest@399f45b1]" started-at="2024-06-18T20:12:24 IST" name="verifyUserIsAbleToLoginWithValidCreds" finished-at="2024-06-18T20:12:26 IST" duration-ms="1704" status="PASS">
+        <test-method signature="verifyUserIsAbleToSubscribeNewsLetter()[pri:0, instance:com.demowebshop.tests.SubscribeTest@478190fc]" started-at="2024-06-19T19:39:37 IST" name="verifyUserIsAbleToSubscribeNewsLetter" finished-at="2024-06-19T19:39:41 IST" duration-ms="3741" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLoginWithValidCreds -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.LoginTest@399f45b1]" started-at="2024-06-18T20:12:26 IST" name="tearDown" finished-at="2024-06-18T20:12:26 IST" duration-ms="198" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToSubscribeNewsLetter -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.SubscribeTest@478190fc]" started-at="2024-06-19T19:39:41 IST" name="tearDown" finished-at="2024-06-19T19:39:41 IST" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.demowebshop.tests.LoginTest -->
+      </class> <!-- com.demowebshop.tests.SubscribeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

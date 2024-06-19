@@ -14,7 +14,6 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 		
 	}
-
 	
 	@FindBy(css="[class='ico-login']")
 	private WebElement loginHeader;
@@ -30,11 +29,12 @@ public class LoginPage {
 	
 	
 	
-	public void login() {
+	public String login(String email, String password) {
 		loginHeader.click();
-		emailInput.sendKeys("obsqura24@gmail.com");
-		passwordInput.sendKeys("mypassword");
+		emailInput.sendKeys(email);
+		passwordInput.sendKeys(password);
 		loginBtn.click();
+		return email;
 	}
 	
 	
