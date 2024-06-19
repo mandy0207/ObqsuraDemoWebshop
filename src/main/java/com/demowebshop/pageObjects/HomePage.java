@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.demowebshop.Utils.UniqueGenerator;
+
 public class HomePage {
 
 	WebDriver driver;
@@ -34,7 +36,7 @@ public class HomePage {
 	}
 	
 	public String subcribeNewsLetter() throws InterruptedException {
-		newsLetterEmail.sendKeys("abc@gmail.com");
+		newsLetterEmail.sendKeys(UniqueGenerator .getUniqueEmail());
 		newsLetterSubscribeBtn.click();
 		Thread.sleep(2000);
 		return newsLetterAlertMsg.getText();
