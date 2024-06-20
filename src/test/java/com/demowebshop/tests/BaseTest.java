@@ -11,8 +11,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.demowebshop.pageObjects.HomePage;
 import com.demowebshop.pageObjects.LoginPage;
-
-import dev.failsafe.internal.util.Durations;
+import com.demowebshop.pageObjects.RegisterPage;
 
 public class BaseTest {
 	WebDriver driver;
@@ -41,10 +40,12 @@ public class BaseTest {
 	
 	public LoginPage lp;
 	public HomePage hp;
+	public RegisterPage rp;
 	
 	public void initPages() {
 		 lp = new LoginPage(driver);
 		 hp = new HomePage(driver);
+		 rp= new RegisterPage(driver);
 	}
 	
 	@AfterMethod

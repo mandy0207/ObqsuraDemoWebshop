@@ -5,13 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.demowebshop.Utils.PageActions;
 import com.demowebshop.Utils.UniqueGenerator;
 
-public class HomePage {
+public class HomePage extends PageActions {
 
 	WebDriver driver;
 	
 	public HomePage(WebDriver driver) {
+		super(driver);
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
 		
@@ -32,14 +34,15 @@ public class HomePage {
 	
 	
 	public String getLoggedEmail() {
-		return loggedEmail.getText();
+		return getElementText(loggedEmail);
 	}
 	
 	public String subcribeNewsLetter() throws InterruptedException {
-		newsLetterEmail.sendKeys(UniqueGenerator .getUniqueEmail());
-		newsLetterSubscribeBtn.click();
+		setTextBox(newsLetterEmail,UniqueGenerator .getUniqueEmail());
+		clickElement(newsLetterSubscribeBtn);
 		Thread.sleep(2000);
-		return newsLetterAlertMsg.getText();
+		return getElementText(newsLetterAlertMsg);
+		
 		
 	}
 	
