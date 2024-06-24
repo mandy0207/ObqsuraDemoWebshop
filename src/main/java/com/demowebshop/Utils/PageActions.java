@@ -1,7 +1,10 @@
 package com.demowebshop.Utils;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -48,5 +51,20 @@ public class PageActions {
 		return element.getText();
 	}
 	
+	public void clickElementJavaScript(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		waitUntilVisible(element);
+		waitUntilClickable(element);
+		js.executeScript("arguments[0].click();", element);
+		
+	}
+	
+	public List<String> getTextContentList(List<WebElement> list) {
+		List<String> textContent= new ArrayList<String>();
+		for(WebElement listItem : list) {
+			textContent.add(getElementText(listItem));
+		}
+		return textContent;
+	}
 	
 }

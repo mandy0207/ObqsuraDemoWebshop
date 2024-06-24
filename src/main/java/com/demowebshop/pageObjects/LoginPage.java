@@ -32,6 +32,15 @@ public class LoginPage extends PageActions {
 
 	@FindBy(css = "[class='ico-register']")
 	private WebElement registerHeader;
+	
+	@FindBy(id = "small-searchterms")
+	private WebElement searchInputBox;
+	
+	@FindBy(css = "[value='Search']")
+	private WebElement searchBtn;
+	
+	
+	
 
 	public String login(String email, String password) {
 		clickElement(loginHeader);
@@ -44,6 +53,11 @@ public class LoginPage extends PageActions {
 	public void navigateToRegisteration() {
 		clickElement(registerHeader);
 
+	}
+	
+	public void searchItem(String item) {
+		setTextBox(searchInputBox, item);
+		clickElementJavaScript(searchBtn);
 	}
 
 }

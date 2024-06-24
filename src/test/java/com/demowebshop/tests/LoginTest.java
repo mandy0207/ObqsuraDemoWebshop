@@ -8,10 +8,10 @@ public class LoginTest extends BaseTest {
 	@Test
 	public void verifyUserIsAbleToLoginWithValidCreds() {
 		
-	    String actualEmail=lp.login("obsqura24@gmail.com", "mypassword");
+	    String actualEmail=loginPage.login(prop.getProperty("email"), prop.getProperty("password"));
 	  
-	    String expectedEmail = hp.getLoggedEmail();
-	    
+	    String expectedEmail = homePage.getLoggedEmail();
+	
 	    Assert.assertEquals(actualEmail, expectedEmail, "Email did not match");
 	    
 	    
