@@ -13,13 +13,14 @@ public class RegisterationTest extends BaseTest{
 	@Test
 	public void verifyUserIsAbleToRegisterWithValidCreds() {
 		
-		loginPage.navigateToRegisteration();
+		
 		Faker faker = new Faker();
 		String firstName = faker.name().firstName();
 		String lastName = faker.name().lastName();
 		String email = faker.internet().emailAddress();
 		String password= faker.internet().password();
 		
+		loginPage.navigateToRegisteration();
 		registerPage.createUser(firstName,lastName, email, password, password);
 		
 		Map<String, String> dataMap = registerPage.validateRegisterationPageItems();

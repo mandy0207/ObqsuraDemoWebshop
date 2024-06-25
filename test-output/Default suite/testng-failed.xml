@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.demowebshop.tests.SearchTest">
+      <class name="com.demowebshop.tests.RegisterationDP">
         <methods>
-          <include name="verifyUserIsAbleToSeeOnlySearchedItems"/>
+          <include name="verifyUserIsAbleToRegisterThroughDP"/>
           <include name="initializeDriver"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.demowebshop.tests.SearchTest -->
+      </class> <!-- com.demowebshop.tests.RegisterationDP -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -21,7 +21,7 @@ public class BaseTest {
 	WebDriver driver;
 	Properties prop;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun =true)
 	public void initializeDriver() throws IOException {
 		prop = TestProperties.getProperties();
 		String browser = prop.getProperty("browser");
@@ -64,7 +64,7 @@ public class BaseTest {
 		productPage=new ProductPage(driver);
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun =true)
 	public void tearDown() {
 		driver.quit();
 	}
