@@ -2,59 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-25T19:58:18 IST" name="Suite" finished-at="2024-06-25T19:58:26 IST" duration-ms="7849">
+  <suite started-at="2024-06-26T20:04:21 IST" name="Default suite" finished-at="2024-06-26T20:04:34 IST" duration-ms="12564">
     <groups>
-      <group name="Smoke">
-        <method signature="RegisterationDP.verifyUserIsAbleToRegisterThroughDP(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.demowebshop.tests.RegisterationDP@139982de]" name="verifyUserIsAbleToRegisterThroughDP" class="com.demowebshop.tests.RegisterationDP"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-06-25T19:58:18 IST" name="Subscribe Test" finished-at="2024-06-25T19:58:18 IST" duration-ms="16">
-    </test> <!-- Subscribe Test -->
-    <test started-at="2024-06-25T19:58:18 IST" name="Login Test" finished-at="2024-06-25T19:58:18 IST" duration-ms="3">
-    </test> <!-- Login Test -->
-    <test started-at="2024-06-25T19:58:18 IST" name="Search Test" finished-at="2024-06-25T19:58:18 IST" duration-ms="1">
-    </test> <!-- Search Test -->
-    <test started-at="2024-06-25T19:58:18 IST" name="Registeration Test" finished-at="2024-06-25T19:58:18 IST" duration-ms="0">
-    </test> <!-- Registeration Test -->
-    <test started-at="2024-06-25T19:58:18 IST" name="Registeration Test DP" finished-at="2024-06-25T19:58:26 IST" duration-ms="7724">
-      <class name="com.demowebshop.tests.RegisterationDP">
-        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.RegisterationDP@139982de]" started-at="2024-06-25T19:58:19 IST" name="initializeDriver" finished-at="2024-06-25T19:58:24 IST" duration-ms="4871" status="PASS">
+    <test started-at="2024-06-26T20:04:21 IST" name="Default test" finished-at="2024-06-26T20:04:34 IST" duration-ms="12564">
+      <class name="com.demowebshop.tests.PurchaseTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.PurchaseTest@2b662a77]" started-at="2024-06-26T20:04:21 IST" name="initializeDriver" finished-at="2024-06-26T20:04:27 IST" duration-ms="6259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsAbleToRegisterThroughDP(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.demowebshop.tests.RegisterationDP@139982de]" started-at="2024-06-25T19:58:24 IST" name="verifyUserIsAbleToRegisterThroughDP" data-provider="getData" finished-at="2024-06-25T19:58:26 IST" duration-ms="2415" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Esta]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Torp]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[otto.cartwright@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[p5a7k0tmjt]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyUserIsAbleToBuyAProduct()[pri:0, instance:com.demowebshop.tests.PurchaseTest@2b662a77]" started-at="2024-06-26T20:04:27 IST" name="verifyUserIsAbleToBuyAProduct" finished-at="2024-06-26T20:04:34 IST" duration-ms="6238" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToRegisterThroughDP -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.RegisterationDP@139982de]" started-at="2024-06-25T19:58:26 IST" name="tearDown" finished-at="2024-06-25T19:58:26 IST" duration-ms="203" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToBuyAProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.PurchaseTest@2b662a77]" started-at="2024-06-26T20:04:34 IST" name="tearDown" finished-at="2024-06-26T20:04:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.demowebshop.tests.RegisterationDP -->
-    </test> <!-- Registeration Test DP -->
-    <test started-at="2024-06-25T19:58:26 IST" name="Excel Registeration Test" finished-at="2024-06-25T19:58:26 IST" duration-ms="6">
-    </test> <!-- Excel Registeration Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.demowebshop.tests.PurchaseTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -16,6 +16,7 @@ import com.demowebshop.pageObjects.HomePage;
 import com.demowebshop.pageObjects.LoginPage;
 import com.demowebshop.pageObjects.ProductPage;
 import com.demowebshop.pageObjects.RegisterPage;
+import com.demowebshop.pageObjects.ShoppingCartPage;
 
 public class BaseTest {
 	WebDriver driver;
@@ -56,12 +57,14 @@ public class BaseTest {
 	public HomePage homePage;
 	public RegisterPage registerPage;
 	public ProductPage productPage;
-
+    public ShoppingCartPage shoppingPage;
 	public void initPages() {
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		registerPage = new RegisterPage(driver);
 		productPage=new ProductPage(driver);
+		shoppingPage= new ShoppingCartPage(driver);
+		
 	}
 
 	@AfterMethod(alwaysRun =true)

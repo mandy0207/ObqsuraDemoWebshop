@@ -7,8 +7,10 @@ import java.util.List;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageActions {
@@ -67,4 +69,29 @@ public class PageActions {
 		return textContent;
 	}
 	
+	public void hoverOverItem(WebElement element) {
+		Actions act = new Actions(driver);
+		act.moveToElement(element).perform();
+		
+	}
+	
+	public void shortWait() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void waitForTextPresentInElement(WebElement element, String value) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+		wait.until(ExpectedConditions.textToBePresentInElement(element, value));
+	}
+	
+	public void selectDropdownByVisibleText(WebElement element, String value) {
+		Select select = new Select(element);
+		select.selectByVisibleText(value);
+	}
+	
 }
+
