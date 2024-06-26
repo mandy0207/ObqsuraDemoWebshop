@@ -45,5 +45,11 @@
 			<class name="com.demowebshop.tests.DataRegisteration" />
 		</classes>
 	</test>
+	
+		<test name="Purchase Test">
+		<classes>
+			<class name="com.demowebshop.tests.PurchaseTest" />
+		</classes>
+	</test>
 
 </suite> 
