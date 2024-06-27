@@ -1,25 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-26T20:04:21 IST" name="Default suite" finished-at="2024-06-26T20:04:34 IST" duration-ms="12564">
+  <suite started-at="2024-06-27T20:03:12 IST" name="Suite" finished-at="2024-06-27T20:04:04 IST" duration-ms="52142">
     <groups>
+      <group name="Smoke">
+        <method signature="RegisterationDP.verifyUserIsAbleToRegisterThroughDP(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.demowebshop.tests.RegisterationDP@1a5a4e19]" name="verifyUserIsAbleToRegisterThroughDP" class="com.demowebshop.tests.RegisterationDP"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-06-26T20:04:21 IST" name="Default test" finished-at="2024-06-26T20:04:34 IST" duration-ms="12564">
-      <class name="com.demowebshop.tests.PurchaseTest">
-        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.PurchaseTest@2b662a77]" started-at="2024-06-26T20:04:21 IST" name="initializeDriver" finished-at="2024-06-26T20:04:27 IST" duration-ms="6259" status="PASS">
+    <test started-at="2024-06-27T20:03:12 IST" name="Subscribe Test" finished-at="2024-06-27T20:03:21 IST" duration-ms="9179">
+      <class name="com.demowebshop.tests.SubscribeTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.SubscribeTest@333d4a8c]" started-at="2024-06-27T20:03:12 IST" name="initializeDriver" finished-at="2024-06-27T20:03:17 IST" duration-ms="4829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsAbleToBuyAProduct()[pri:0, instance:com.demowebshop.tests.PurchaseTest@2b662a77]" started-at="2024-06-26T20:04:27 IST" name="verifyUserIsAbleToBuyAProduct" finished-at="2024-06-26T20:04:34 IST" duration-ms="6238" status="PASS">
+        <test-method signature="verifyUserIsAbleToSubscribeNewsLetter()[pri:0, instance:com.demowebshop.tests.SubscribeTest@333d4a8c]" started-at="2024-06-27T20:03:17 IST" name="verifyUserIsAbleToSubscribeNewsLetter" finished-at="2024-06-27T20:03:21 IST" duration-ms="4078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToSubscribeNewsLetter -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.SubscribeTest@333d4a8c]" started-at="2024-06-27T20:03:21 IST" name="tearDown" finished-at="2024-06-27T20:03:21 IST" duration-ms="215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demowebshop.tests.SubscribeTest -->
+    </test> <!-- Subscribe Test -->
+    <test started-at="2024-06-27T20:03:21 IST" name="Login Test" finished-at="2024-06-27T20:03:27 IST" duration-ms="5754">
+      <class name="com.demowebshop.tests.LoginTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.LoginTest@3b35a229]" started-at="2024-06-27T20:03:21 IST" name="initializeDriver" finished-at="2024-06-27T20:03:25 IST" duration-ms="3804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="verifyUserIsAbleToLoginWithValidCreds()[pri:0, instance:com.demowebshop.tests.LoginTest@3b35a229]" started-at="2024-06-27T20:03:25 IST" name="verifyUserIsAbleToLoginWithValidCreds" finished-at="2024-06-27T20:03:27 IST" duration-ms="1756" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Email did not match expected [jkbjbjkbk] but found [obsqura24@gmail.com]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Email did not match expected [jkbjbjkbk] but found [obsqura24@gmail.com]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.demowebshop.tests.LoginTest.verifyUserIsAbleToLoginWithValidCreds(LoginTest.java:15)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToLoginWithValidCreds -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.LoginTest@3b35a229]" started-at="2024-06-27T20:03:27 IST" name="tearDown" finished-at="2024-06-27T20:03:27 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demowebshop.tests.LoginTest -->
+    </test> <!-- Login Test -->
+    <test started-at="2024-06-27T20:03:27 IST" name="Search Test" finished-at="2024-06-27T20:03:32 IST" duration-ms="4933">
+      <class name="com.demowebshop.tests.SearchTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.SearchTest@565f390]" started-at="2024-06-27T20:03:27 IST" name="initializeDriver" finished-at="2024-06-27T20:03:31 IST" duration-ms="3574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="verifyUserIsAbleToSeeOnlySearchedItems()[pri:0, instance:com.demowebshop.tests.SearchTest@565f390]" started-at="2024-06-27T20:03:31 IST" name="verifyUserIsAbleToSeeOnlySearchedItems" finished-at="2024-06-27T20:03:32 IST" duration-ms="1208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToSeeOnlySearchedItems -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.SearchTest@565f390]" started-at="2024-06-27T20:03:32 IST" name="tearDown" finished-at="2024-06-27T20:03:32 IST" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demowebshop.tests.SearchTest -->
+    </test> <!-- Search Test -->
+    <test started-at="2024-06-27T20:03:32 IST" name="Registeration Test" finished-at="2024-06-27T20:03:39 IST" duration-ms="6492">
+      <class name="com.demowebshop.tests.RegisterationTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.RegisterationTest@5be1d0a4]" started-at="2024-06-27T20:03:32 IST" name="initializeDriver" finished-at="2024-06-27T20:03:36 IST" duration-ms="3903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="verifyUserIsAbleToRegisterWithValidCreds()[pri:0, instance:com.demowebshop.tests.RegisterationTest@5be1d0a4]" started-at="2024-06-27T20:03:36 IST" name="verifyUserIsAbleToRegisterWithValidCreds" finished-at="2024-06-27T20:03:38 IST" duration-ms="2460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToRegisterWithValidCreds -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.RegisterationTest@5be1d0a4]" started-at="2024-06-27T20:03:38 IST" name="tearDown" finished-at="2024-06-27T20:03:39 IST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demowebshop.tests.RegisterationTest -->
+    </test> <!-- Registeration Test -->
+    <test started-at="2024-06-27T20:03:39 IST" name="Registeration Test DP" finished-at="2024-06-27T20:03:45 IST" duration-ms="6591">
+      <class name="com.demowebshop.tests.RegisterationDP">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.RegisterationDP@1a5a4e19]" started-at="2024-06-27T20:03:39 IST" name="initializeDriver" finished-at="2024-06-27T20:03:43 IST" duration-ms="4152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="verifyUserIsAbleToRegisterThroughDP(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.demowebshop.tests.RegisterationDP@1a5a4e19]" started-at="2024-06-27T20:03:43 IST" name="verifyUserIsAbleToRegisterThroughDP" data-provider="getData" finished-at="2024-06-27T20:03:45 IST" duration-ms="2251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Margart]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bruen]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[jefferson.swaniawski@hotmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jz1g3869k1s]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToRegisterThroughDP -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.RegisterationDP@1a5a4e19]" started-at="2024-06-27T20:03:45 IST" name="tearDown" finished-at="2024-06-27T20:03:45 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demowebshop.tests.RegisterationDP -->
+    </test> <!-- Registeration Test DP -->
+    <test started-at="2024-06-27T20:03:45 IST" name="Excel Registeration Test" finished-at="2024-06-27T20:03:53 IST" duration-ms="8042">
+      <class name="com.demowebshop.tests.DataRegisteration">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.DataRegisteration@7975d1d8]" started-at="2024-06-27T20:03:45 IST" name="initializeDriver" finished-at="2024-06-27T20:03:50 IST" duration-ms="4859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="verifyUserIsAbleToRegister()[pri:0, instance:com.demowebshop.tests.DataRegisteration@7975d1d8]" started-at="2024-06-27T20:03:50 IST" name="verifyUserIsAbleToRegister" finished-at="2024-06-27T20:03:53 IST" duration-ms="3013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToRegister -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.DataRegisteration@7975d1d8]" started-at="2024-06-27T20:03:53 IST" name="tearDown" finished-at="2024-06-27T20:03:53 IST" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demowebshop.tests.DataRegisteration -->
+    </test> <!-- Excel Registeration Test -->
+    <test started-at="2024-06-27T20:03:53 IST" name="Purchase Test" finished-at="2024-06-27T20:04:04 IST" duration-ms="10582">
+      <class name="com.demowebshop.tests.PurchaseTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.demowebshop.tests.PurchaseTest@3e2055d6]" started-at="2024-06-27T20:03:53 IST" name="initializeDriver" finished-at="2024-06-27T20:03:58 IST" duration-ms="4366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="verifyUserIsAbleToBuyAProduct()[pri:0, instance:com.demowebshop.tests.PurchaseTest@3e2055d6]" started-at="2024-06-27T20:03:58 IST" name="verifyUserIsAbleToBuyAProduct" finished-at="2024-06-27T20:04:04 IST" duration-ms="6043" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserIsAbleToBuyAProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.PurchaseTest@2b662a77]" started-at="2024-06-26T20:04:34 IST" name="tearDown" finished-at="2024-06-26T20:04:34 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demowebshop.tests.PurchaseTest@3e2055d6]" started-at="2024-06-27T20:04:04 IST" name="tearDown" finished-at="2024-06-27T20:04:04 IST" duration-ms="169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.demowebshop.tests.PurchaseTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Purchase Test -->
+  </suite> <!-- Suite -->
 </testng-results>

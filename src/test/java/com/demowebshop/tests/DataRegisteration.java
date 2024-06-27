@@ -6,7 +6,9 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
 import com.demowebshop.Utils.ExcelReader;
+import com.demowebshop.Utils.ReportNG;
 import com.demowebshop.Utils.UniqueGenerator;
 
 public class DataRegisteration extends BaseTest{
@@ -14,6 +16,7 @@ public class DataRegisteration extends BaseTest{
 	
 	@Test
 	public void verifyUserIsAbleToRegister() throws IOException {
+		
 		String firstName=ExcelReader.getCellValue(1, 0);
 		String lastName= ExcelReader.getCellValue(1, 1);
 		String email=ExcelReader.getCellValue(1, 2)+UniqueGenerator.getCurrentDateTime()+"@yopmail.com";
