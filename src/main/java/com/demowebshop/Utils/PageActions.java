@@ -1,10 +1,15 @@
 package com.demowebshop.Utils;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,6 +17,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.demowebshop.Context.Constants;
+import com.demowebshop.Context.DriverManager;
 
 public class PageActions {
 
@@ -92,6 +100,21 @@ public class PageActions {
 		Select select = new Select(element);
 		select.selectByVisibleText(value);
 	}
+
 	
+//	public static String getScreenshot() throws IOException {
+//		TakesScreenshot screenshot = (TakesScreenshot)DriverManager.getDriver();
+//		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+//		String path =Constants.Screenshot;
+//		File destFile = new File(path);
+//		FileUtils.moveFile(srcFile, destFile);
+//		return path;
+//		
+//	}
+	
+	public static String getScreenshot() {
+		TakesScreenshot screenshot = (TakesScreenshot)DriverManager.getDriver();
+		return screenshot.getScreenshotAs(OutputType.BASE64);
+	}
 }
 

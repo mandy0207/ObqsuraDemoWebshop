@@ -5,31 +5,35 @@
 		<listener class-name="com.demowebshop.listeners.ReportListeners"></listener>
 	</listeners>
 	<test name="Subscribe Test">
+		<parameter name="browserName" value="Chrome"></parameter>
 		<classes>
 			<class name="com.demowebshop.tests.SubscribeTest" />
 		</classes>
 	</test>
 
 	<test name="Login Test">
+		<parameter name="browserName" value="edge"></parameter>
 		<classes>
 			<class name="com.demowebshop.tests.LoginTest" />
 		</classes>
 	</test>
 
 	<test name="Search Test">
+		<parameter name="browserName" value="edge"></parameter>
 		<classes>
 			<class name="com.demowebshop.tests.SearchTest" />
 		</classes>
 	</test>
 
 	<test name="Registeration Test">
+		<parameter name="browserName" value="edge"></parameter>
 		<classes>
-
 			<class name="com.demowebshop.tests.RegisterationTest" />
 		</classes>
 	</test>
 
 	<test name="Registeration Test DP">
+		<parameter name="browserName" value="Chrome"></parameter>
 		<classes>
 			<class name="com.demowebshop.tests.RegisterationDP" />
 
@@ -38,12 +42,14 @@
 	
 	
 	<test name="Excel Registeration Test">
+		<parameter name="browserName" value="firefox"></parameter>
 		<classes>
 			<class name="com.demowebshop.tests.DataRegisteration" />
 		</classes>
 	</test>
 	
 		<test name="Purchase Test">
+			<parameter name="browserName" value="firefox"></parameter>
 		<classes>
 			<class name="com.demowebshop.tests.PurchaseTest" />
 		</classes>

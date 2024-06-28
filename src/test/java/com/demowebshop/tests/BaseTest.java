@@ -10,7 +10,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
+import com.demowebshop.Context.DriverManager;
 import com.demowebshop.Utils.TestProperties;
 import com.demowebshop.pageObjects.HomePage;
 import com.demowebshop.pageObjects.LoginPage;
@@ -22,24 +25,32 @@ public class BaseTest {
 	WebDriver driver;
 	Properties prop;
 
-	@BeforeMethod(alwaysRun =true)
-	public void initializeDriver() throws IOException {
+	@BeforeMethod(alwaysRun = true)
+	@Parameters({"browserName"})
+	public void initializeDriver(@Optional String browserName) throws IOException {
 		prop = TestProperties.getProperties();
-		String browser = prop.getProperty("browser");
+		if ( browserName == null || browserName.isEmpty()) {
+			System.out.println("hello");
+			browserName = prop.getProperty("browser");
+		}
+
+	
+
 		String env = prop.getProperty("envrionment");
 		String URL = prop.getProperty(env);
 
 		System.out.println("Executing in : " + env);
 
-		getDriver(browser);
-		driver.manage().window().maximize();
+		getDriver(browserName);
+		DriverManager.setDriver(driver);
+		DriverManager.getDriver().manage().window().maximize();
 		initPages();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get(URL);
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		DriverManager.getDriver().get(URL);
 	}
 
 	public void getDriver(String browser) {
-		if (browser.equalsIgnoreCase("Chrome")) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 
 		} else if (browser.equalsIgnoreCase("edge")) {
@@ -57,18 +68,21 @@ public class BaseTest {
 	public HomePage homePage;
 	public RegisterPage registerPage;
 	public ProductPage productPage;
-    public ShoppingCartPage shoppingPage;
+	public ShoppingCartPage shoppingPage;
+
 	public void initPages() {
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		registerPage = new RegisterPage(driver);
-		productPage=new ProductPage(driver);
-		shoppingPage= new ShoppingCartPage(driver);
-		
+		productPage = new ProductPage(driver);
+		shoppingPage = new ShoppingCartPage(driver);
+
 	}
 
-	@AfterMethod(alwaysRun =true)
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		driver.quit();
+		DriverManager.getDriver().quit();
+
 	}
+
 }
