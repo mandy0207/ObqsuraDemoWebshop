@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -30,7 +31,6 @@ public class BaseTest {
 	public void initializeDriver(@Optional String browserName) throws IOException {
 		prop = TestProperties.getProperties();
 		if ( browserName == null || browserName.isEmpty()) {
-			System.out.println("hello");
 			browserName = prop.getProperty("browser");
 		}
 
@@ -51,6 +51,8 @@ public class BaseTest {
 
 	public void getDriver(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
+			//ChromeOptions opt= new ChromeOptions();
+			//opt.addArguments("--headless=new");
 			driver = new ChromeDriver();
 
 		} else if (browser.equalsIgnoreCase("edge")) {

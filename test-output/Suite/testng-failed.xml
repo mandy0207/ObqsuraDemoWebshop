@@ -3,6 +3,7 @@
 <suite thread-count="6" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.demowebshop.listeners.ReportListeners"/>
+    <listener class-name="com.demowebshop.listeners.DemoShopTransformer"/>
   </listeners>
   <test thread-count="6" parallel="tests" name="Login Test(failed)">
     <classes>

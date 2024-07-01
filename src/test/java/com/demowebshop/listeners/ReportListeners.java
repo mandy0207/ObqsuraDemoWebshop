@@ -13,6 +13,9 @@ import com.demowebshop.Utils.ReportNG;
 
 public class ReportListeners  implements ITestListener{
 
+
+
+
 	ExtentReports extent= ReportNG.generateReport();
 	ThreadLocal<ExtentTest> extentTest= new ThreadLocal<ExtentTest>();
 	ExtentTest test;
@@ -35,6 +38,11 @@ public class ReportListeners  implements ITestListener{
 		extentTest.get().log(Status.FAIL, MediaEntityBuilder.createScreenCaptureFromBase64String(PageActions.getScreenshot()).build());
 	}
 
+	
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		extentTest.get().log(Status.SKIP, "Test Skipped");
+	}
 
 	@Override
 	public void onFinish(ITestContext context) {
