@@ -51,9 +51,9 @@ public class BaseTest {
 
 	public void getDriver(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
-			//ChromeOptions opt= new ChromeOptions();
-			//opt.addArguments("--headless=new");
-			driver = new ChromeDriver();
+			ChromeOptions opt= new ChromeOptions();
+			opt.addArguments("--headless=new");
+			driver = new ChromeDriver(opt);
 
 		} else if (browser.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
